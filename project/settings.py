@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-3cz^)&hw636t7$p+mpw1%k-rw&3-$bem#9db5c2ut*sng$j12$
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
@@ -111,7 +111,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Africa/Cairo'
+TIME_ZONE = 'Asia/Dhaka' # Dhaka, Bangladesh
 
 USE_I18N = True
 
@@ -122,6 +122,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [BASE_DIR / 'static']
+STATIC_ROOT = BASE_DIR / "staticfiles"    # Absolute location for the collected static files
+STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage" # Staticfile Engine
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Default primary key field type
